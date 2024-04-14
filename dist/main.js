@@ -1,1 +1,0 @@
-(()=>{"use strict";console.log("Привет, я функция One"),console.log("Привет, я функция Two")})();
