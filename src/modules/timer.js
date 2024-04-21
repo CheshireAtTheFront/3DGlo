@@ -16,7 +16,7 @@ const timer = (deadline) => {
 
     const updateClock = () => {
       const getTime = getTimeRemaining();
-      
+
       const addZero = function(num) {
         if (num <= 9) {
           return '0' + num;
@@ -43,4 +43,5 @@ const timer = (deadline) => {
     }  
     updateClock();
 }
+
 export default timer;
