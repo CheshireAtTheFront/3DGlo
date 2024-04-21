@@ -11,7 +11,7 @@ const modal = () => {
         modalContent.style.opacity = '.5';
         setTimeout(() => {
           modalContent.style.opacity = '1';
-        }, 63);
+        }, 120);
       } else {
         modal.style.display = 'block';
       }
@@ -20,14 +20,13 @@ const modal = () => {
 
   closeBtn.addEventListener('click', () => {
     if (window.innerWidth > 768) {
-      modal.style.display = 'none';
-      modalContent.style.opacity = '0.5';
+      modalContent.style.opacity = '.5';
       setTimeout(() => {
-        console.log('click');
         modalContent.style.opacity = '0';
-      }, 1000);
+        modal.style.display = 'none';
+      }, 120);
     } else {
-      modal.style.display = 'block';
+      modal.style.display = 'none';
     }
   })
 
