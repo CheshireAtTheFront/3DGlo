@@ -1,15 +1,9 @@
-// точка входа 
+// точка входа
 
-<<<<<<< HEAD
-import funcOne from './modules/one';
-import funcTwo from './modules/two';
+import timer from "./modules/timer";
+import menu from "./modules/menu";
+import modal from "./modules/modal";
 
-funcOne();
-funcTwo();
-=======
-import timer from './modules/timer';
-// import two from './modules/two';
-
-timer('29 april 2024');
-// two();
->>>>>>> lesson19
+timer("8 july 2024");
+menu();
+modal();
