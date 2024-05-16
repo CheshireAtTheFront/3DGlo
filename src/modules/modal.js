@@ -9,16 +9,14 @@ const modal = () => {
       if (window.innerWidth > 768) {
         modal.style.display = "block";
         modalContent.style.opacity = 0;
-        setTimeout(() => {
-          const interval = setInterval(() => {
-            modalContent.style.opacity =
-              parseFloat(modalContent.style.opacity) + 0.1;
+        const interval = setInterval(() => {
+          modalContent.style.opacity =
+            parseFloat(modalContent.style.opacity) + 0.1;
 
-            if (modalContent.style.opacity >= 1) {
-              clearInterval(interval);
-            }
-          }, 45);
-        }, 40);
+          if (modalContent.style.opacity >= 1) {
+            clearInterval(interval);
+          }
+        }, 30);
       } else {
         modal.style.display = "block";
       }
@@ -28,17 +26,15 @@ const modal = () => {
   closeBtn.addEventListener("click", () => {
     if (window.innerWidth > 768) {
       modalContent.style.opacity = 1;
-      setTimeout(() => {
-        const interval = setInterval(() => {
-          modalContent.style.opacity =
-            parseFloat(modalContent.style.opacity) - 0.1;
+      const interval = setInterval(() => {
+        modalContent.style.opacity =
+          parseFloat(modalContent.style.opacity) - 0.1;
 
-          if (modalContent.style.opacity <= 0) {
-            clearInterval(interval);
-            modal.style.display = "none";
-          }
-        }, 40);
-      }, 45);
+        if (modalContent.style.opacity <= 0) {
+          clearInterval(interval);
+          modal.style.display = "none";
+        }
+      }, 30);
     } else {
       modal.style.display = "none";
     }
