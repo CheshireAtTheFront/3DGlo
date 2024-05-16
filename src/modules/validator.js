@@ -7,7 +7,7 @@ const validator = () => {
   const calcCount = document.querySelector(".calc-count");
   const calcDay = document.querySelector(".calc-day");
   const calcSquare = document.querySelector(".calc-square");
-  // формы
+  // форма
   formText.forEach((item) => {
     item.addEventListener("input", (event) => {
       event.target.value = event.target.value.replace(/[^а-яА-Я-]/g, "");
