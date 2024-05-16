@@ -16,7 +16,7 @@ const modal = () => {
           if (modalContent.style.opacity >= 1) {
             clearInterval(interval);
           }
-        }, 30);
+        }, 20);
       } else {
         modal.style.display = "block";
       }
@@ -34,7 +34,7 @@ const modal = () => {
           clearInterval(interval);
           modal.style.display = "none";
         }
-      }, 30);
+      }, 20);
     } else {
       modal.style.display = "none";
     }
@@ -42,8 +42,3 @@ const modal = () => {
 };
 
 export default modal;
-
-// modalContent.style.opacity = ".5";
-// setTimeout(() => {
-//   modalContent.style.opacity = "1";
-// }, 127);
