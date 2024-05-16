@@ -10,13 +10,13 @@ const validator = () => {
   // форма
   formText.forEach((item) => {
     item.addEventListener("input", (event) => {
-      event.target.value = event.target.value.replace(/[^а-яА-Я-]/g, "");
+      event.target.value = event.target.value.replace(/[^а-яА-Я]/g, "");
     });
   });
 
   formPhone.forEach((item) => {
     item.addEventListener("input", (event) => {
-      event.target.value = event.target.value.replace(/[^() -\d]/g, "");
+      event.target.value = event.target.value.replace(/[^()-\d]/g, "");
     });
   });
 
@@ -27,7 +27,7 @@ const validator = () => {
   });
 
   formMessage.addEventListener("input", (event) => {
-    event.target.value = event.target.value.replace(/[^а-яА-Я-]/g, "");
+    event.target.value = event.target.value.replace(/[^а-яА-Я]/g, "");
   });
 
   //калькулятор
