@@ -10,7 +10,7 @@ const validator = () => {
   // форма
   formText.forEach((item) => {
     item.addEventListener("input", (event) => {
-      event.target.value = event.target.value.replace(/[^а-яА-Я]/g, "");
+      event.target.value = event.target.value.replace(/[^а-яА-Я\s-]/g, "");
     });
   });
 
@@ -27,7 +27,7 @@ const validator = () => {
   });
 
   formMessage.addEventListener("input", (event) => {
-    event.target.value = event.target.value.replace(/[^а-яА-Я]/g, "");
+    event.target.value = event.target.value.replace(/[^а-яА-Я\s-]/g, "");
   });
 
   //калькулятор
