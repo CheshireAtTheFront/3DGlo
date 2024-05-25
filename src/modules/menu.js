@@ -3,10 +3,10 @@ const menu = () => {
   const body = document.querySelector("body");
 
   body.addEventListener("click", (e) => {
-    let listMenu = e.target;
-    if (listMenu.closest(".menu") || listMenu.classList.contains("close-btn")) {
+    let itemMenu = e.target;
+    if (itemMenu.closest(".menu") || itemMenu.classList.contains("close-btn")) {
       menu.classList.toggle("active-menu");
-    } else if (!listMenu.matches("menu") && listMenu.tagName != "LI") {
+    } else if (!itemMenu.matches("menu") && !itemMenu.matches("menu li")) {
       menu.classList.remove("active-menu");
     } else {
       menu.classList.add("active-menu");
