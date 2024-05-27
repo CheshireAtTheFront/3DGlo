@@ -6,6 +6,7 @@ import modal from "./modules/modal";
 import validator from "./modules/validator";
 import tabs from "./modules/tabs";
 import slider from "./modules/slider";
+import calc from "./modules/calc";
 
 timer("8 july 2024");
 menu();
@@ -13,3 +14,4 @@ modal();
 validator();
 tabs();
 slider();
+calc(100);
