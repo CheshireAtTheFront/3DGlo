@@ -37,6 +37,7 @@ const timer = (deadline) => {
       clearInterval(clearTimer);
     }
   }, 1000);
+  updateClock();
 };
 
 export default timer;
