@@ -6,6 +6,20 @@ const calc = (price = 100) => {
   const calcDay = document.querySelector(".calc-day");
   const total = document.getElementById("total");
 
+  const validate = () => {
+    calcDay.addEventListener("input", (event) => {
+      event.target.value = event.target.value.replace(/\D+/, "");
+    });
+
+    calcSquare.addEventListener("input", (event) => {
+      event.target.value = event.target.value.replace(/\D+/, "");
+    });
+
+    calcCount.addEventListener("input", (event) => {
+      event.target.value = event.target.value.replace(/\D+/, "");
+    });
+  };
+
   const countCalc = () => {
     const calcTypeValue = +calcType.options[calcType.selectedIndex].value;
     const calcSquareValue = calcSquare.value;
@@ -44,6 +58,10 @@ const calc = (price = 100) => {
       countCalc();
     }
   });
+
+  if (validate()) {
+    countCalc();
+  }
 };
 
 export default calc;

@@ -5,6 +5,8 @@ const sendForm = ({ formid, someElem = [] }) => {
   const errorText = "Ошибка";
   const successText = "Спасибо! Наш менеджер с Вами свяжется!";
 
+  statusBlock.style.color = "white";
+
   const validate = (list) => {
     let success = true;
 
@@ -12,22 +14,30 @@ const sendForm = ({ formid, someElem = [] }) => {
       switch (input.name) {
         case "user_name":
           if (!/[а-яА-Я\s]/g.test(input.value)) {
+            input.style.border = "2px solid red";
             success = false;
+          } else {
+            input.style.border = "none";
           }
           break;
         case "user_message":
           if (!/[а-яА-Я0-9\.\,\s]/g.test(input.value)) {
+            input.style.border = "2px solid red";
             success = false;
+          } else {
+            input.style.border = "none";
           }
           break;
         case "user_phone":
           if (/[^+()-\d]/g.test(input.value)) {
+            input.style.border = "2px solid red";
             success = false;
+          } else {
+            input.style.border = "none";
           }
           break;
       }
     });
-
     return success;
   };
 
@@ -69,6 +79,9 @@ const sendForm = ({ formid, someElem = [] }) => {
       sendData(formBody)
         .then((data) => {
           statusBlock.textContent = successText;
+          setTimeout(() => {
+            statusBlock.textContent = "";
+          }, 3000);
 
           formElements.forEach((input) => {
             input.value = "";
@@ -78,7 +91,7 @@ const sendForm = ({ formid, someElem = [] }) => {
           statusBlock.textContent = errorText;
         });
     } else {
-      alert("Данные не валидны!!!");
+      statusBlock.textContent = "Данные не валидны!!!";
     }
   };
 

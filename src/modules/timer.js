@@ -4,12 +4,12 @@ const timer = (deadline) => {
   const timerSeconds = document.getElementById("timer-seconds");
 
   const getTimeRemaining = () => {
-    let dateStop = new Date(deadline).getTime();
-    let dateNew = new Date().getTime();
-    let timeRemaining = (dateStop - dateNew) / 1000;
-    let hours = Math.floor(timeRemaining / 60 / 60);
-    let minutes = Math.floor((timeRemaining / 60) % 60);
-    let seconds = Math.floor(timeRemaining % 60);
+    const dateStop = new Date(deadline).getTime();
+    const dateNew = new Date().getTime();
+    const timeRemaining = (dateStop - dateNew) / 1000;
+    const hours = Math.floor(timeRemaining / 60 / 60);
+    const minutes = Math.floor((timeRemaining / 60) % 60);
+    const seconds = Math.floor(timeRemaining % 60);
 
     return { timeRemaining, hours, minutes, seconds };
   };
@@ -28,7 +28,7 @@ const timer = (deadline) => {
     timerMinutes.textContent = addZero(getTime.minutes);
     timerSeconds.textContent = addZero(getTime.seconds);
   };
-  let timer = getTimeRemaining();
+  const timer = getTimeRemaining();
 
   const clearTimer = setInterval(() => {
     if (timer.timeRemaining > 0) {
