@@ -14,7 +14,7 @@ const sendForm = ({ formid, someElem = [] }) => {
       switch (input.name) {
         case "user_name":
           if (!/[а-яА-Я\s]/g.test(input.value)) {
-            input.style.border = "2px solid red";
+            input.style.border = "1.5px solid red";
             success = false;
           } else {
             input.style.border = "none";
@@ -22,7 +22,7 @@ const sendForm = ({ formid, someElem = [] }) => {
           break;
         case "user_message":
           if (!/[а-яА-Я0-9\.\,\s]/g.test(input.value)) {
-            input.style.border = "2px solid red";
+            input.style.border = "1.5px solid red";
             success = false;
           } else {
             input.style.border = "none";
@@ -30,7 +30,7 @@ const sendForm = ({ formid, someElem = [] }) => {
           break;
         case "user_phone":
           if (/[^+()-\d]/g.test(input.value)) {
-            input.style.border = "2px solid red";
+            input.style.border = "1.5px solid red";
             success = false;
           } else {
             input.style.border = "none";
